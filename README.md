@@ -37,9 +37,21 @@ Kibana4 only works with recent versions of Elasticsearch (1.4.4 and later). I re
 
 ### Beginning with kibana4
 
+Minimal configuration in puppet:
+
+```
 include kibana4
+```
 
 ## Usage
+
+Install specific Kibana version:
+
+```
+  class { '::kibana4':
+    package_ensure    => '4.1.1-linux-x64',
+  }
+```
 
 If you decided to have the module create a user, you will need to specify
 user name, group name, uid and gid.
